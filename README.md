@@ -11,3 +11,6 @@ Anyway, this code editor comes with rich features (well, planned, since you know
 - Extension API
 - Themeing
 - Run VSCode extensions via open-vsx (🎉)
+- Split windows
+- Tabs
+- ...other stuff you can suggest in issues
