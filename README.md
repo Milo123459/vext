@@ -14,3 +14,9 @@ Anyway, this code editor comes with rich features (well, planned, since you know
 - Split windows
 - Tabs
 - ...other stuff you can suggest in issues
+
+## Planned usage
+
+`vext ./file`
+
+`vext ./folder`
