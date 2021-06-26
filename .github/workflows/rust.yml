@@ -1,0 +1,68 @@
+name: Main workflow
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  # Run the `rustfmt` code formatter
+  rustfmt:
+    name: Rustfmt [Formatter]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup | Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          profile: minimal
+          components: rustfmt
+
+      - name: Build | Format
+        run: cargo fmt --all -- --check
+
+  # Run the `clippy` linting tool
+  clippy:
+    name: Clippy [Linter]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup | Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          profile: minimal
+          components: clippy
+
+      - name: Build | Lint
+        uses: actions-rs/cargo@v1
+        with:
+          command: clippy
+          args: --workspace --locked --all-targets --all-features
+
+  # Ensure that the project could be successfully compiled
+  cargo_check:
+    name: Compile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup | Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+
+      - name: Build | Check
+        run: cargo check --workspace --locked
