@@ -46,8 +46,7 @@ jobs:
       - name: Build | Lint
         uses: actions-rs/cargo@v1
         with:
-          command: clippy
-          args: --workspace --locked --all-targets --all-features
+          command: lint
 
   # Ensure that the project could be successfully compiled
   cargo_check:
