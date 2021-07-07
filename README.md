@@ -1,9 +1,11 @@
 # vext
 🤙 Vext is a code editor that lives in the Terminal.
 
-Vext is written in pure Rust and is ridiculously memory & CPU efficient. Vext exposes rich APIs for writing plugins, and plugins can be written in Rust.
+[![CodeFactor](https://www.codefactor.io/repository/github/milo123459/vext/badge)](https://www.codefactor.io/repository/github/milo123459/vext) [![Releases](https://img.shields.io/github/downloads/Milo123459/vext/total.svg)](https://github.com/Milo123459/vext) [![license](https://img.shields.io/github/license/Milo123459/vext.svg)](https://github.com/Milo123459/vext/blob/master/LICENSE) [![lines](https://tokei.rs/b1/github/Milo123459/vext?category=lines)](https://github.com/Milo123459/vext)
 
-Anyway, this code editor comes with rich features (well, planned, since you know.. it's quite a challenge!) including:
+Vext is written in pure Rust, making it memory and CPU efficient. It's fast. It's small. It's easy. It's hackable. What more could you possibly want? 
+
+**Vext** strives to provide a better way of writing code, which works on almost any device, because of it's efficientcy. Get ready for the next generation of code editors.
 
 - Status bar
 - Extension API
