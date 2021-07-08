@@ -9,8 +9,6 @@ on:
       - '**/Cargo.toml'
       - '**/Cargo.lock'
       - '**/audit.yml'
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   security_audit:
