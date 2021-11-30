@@ -10,5 +10,5 @@ include = ["src/**/*", "LICENSE", "README.md"]
 [dependencies]
 crossterm = "0.21.0"
 colored = "2.0.0"
-anyhow = "1.0.44"
+anyhow = "1.0.51"
 structopt = "0.3.25"
